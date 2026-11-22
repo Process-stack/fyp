@@ -1,0 +1,19 @@
+{
+  "name": "resume-analysis-fyp",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Explainable and fair resume analysis FYP application",
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "dev": "concurrently -k -n API,WEB \"npm run dev -w server\" \"npm run dev -w client\"",
+    "build": "npm run build -w client",
+    "test": "npm test -w server",
+    "start": "npm start -w server"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
